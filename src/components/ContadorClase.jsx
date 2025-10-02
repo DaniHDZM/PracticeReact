@@ -1,35 +1,25 @@
-import React, {Component} from "react";
+import React, {useState} from "react";
 
-class ContadorClase extends Component {
+const ContadorClase = () => {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            conteo: 0,
-        }
+    const [conteo, setConteo] = useState(0);
+
+    const incrementar = () => {
+        setConteo((prevConteo) => prevConteo + 1);
     }
 
-    incrementar = () => {
-        this.setState((prevState) => ({ conteo: prevState.conteo + 1}));
+    const reducir = () => {
+        setConteo((prevConteo) => prevConteo -1);
     }
-
-    reducir = () => {
-        this.setState((prevState) => ({ conteo: prevState.conteo - 1}));
-    }
-
-    render () {
-
-        const {conteo} = this.state;
-
-        return (
-            <div>
-                <h1>Contador</h1>
-                <p>Conteo: {conteo} </p>
-                <button onClick={this.incrementar}>Incrementar</button>
-                <button onClick={this.reducir}>Reducir</button>
-            </div>
-        );
-    }
-
+    
+    return (
+        <div>
+            <h1>Contador</h1>
+            <p>Conteo: {conteo} </p>
+            <button onClick={incrementar}>Incrementar</button>
+            <button onClick={reducir}>Reducir</button>
+        </div>
+    );
 }
+
 export default ContadorClase;
