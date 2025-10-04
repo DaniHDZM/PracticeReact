@@ -13,12 +13,12 @@ const ContadorClase = () => {
     }
     
     return (
-        <div>
+        <section>
             <h1>Contador</h1>
             <p>Conteo: {conteo} </p>
             <button onClick={incrementar}>Incrementar</button>
             <button onClick={reducir}>Reducir</button>
-        </div>
+        </section>
     );
 }
 
