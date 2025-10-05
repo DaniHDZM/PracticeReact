@@ -1,6 +1,7 @@
 import './App.css'
 import MiBoton from './components/Miboton'
 import ContadorClase from './components/ContadorClase'
+import List from './components/List'
 
 function App() {
 
@@ -8,6 +9,8 @@ function App() {
     <>
       <ContadorClase/>
       <MiBoton/>
+      <List/>
+
     </>
   )
 }
